@@ -1,0 +1,70 @@
+.topNav-section{
+  position: fixed;
+  width: 375px;
+}
+
+.topNav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 41px;
+}
+
+.profiles{
+  min-width: 103px;
+  height: 20px;
+  margin: 2px 41px 58px 24px;
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #b1b8c5;
+  text-decoration: none;
+}
+
+.Path-2 {
+    width: 28px;
+    height: 1px;
+    margin: 0 0 9px;
+    border: solid 0.5px #6374f3;
+    background-color: #6374f3;
+  }
+
+  .menu-section{
+      margin-right: 24px;
+  }
+
+  .user-detail-topnav{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+  }
+
+  .my-profiles{
+    min-width: 103px;
+    height: 20px;
+    padding-top: 20px;
+    margin: 2px 41px 58px 24px;
+    font-family: Gotham;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #b1b8c5;
+    text-decoration: none;
+  }
+
+  .toplink{
+    text-decoration: none;
+    margin-left: 40px;
+  }
+
+  .icon-back{
+    color:  #6374f3;
+  }

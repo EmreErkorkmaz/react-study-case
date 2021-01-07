@@ -1,0 +1,31 @@
+.layout{
+    width: 375px;
+    height: 667px;
+    padding: 0 0 72px;
+    background: #ffffff;
+    border: 2px black solid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px black;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

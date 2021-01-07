@@ -1,0 +1,129 @@
+.user-detail-top-section {
+  display: flex;
+  margin-top: -35px;
+}
+
+.user-detail-top-section img {
+  width: 100px;
+  height: 100px;
+  margin: 33px 18px 25px 24px;
+  border-radius: 50px;
+}
+
+.user-detail-top-section h2 {
+  width: 47px;
+  height: 16px;
+  margin: 56px 85px 9px 13px;
+  font-family: Gotham;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b1b8c5;
+}
+
+.user-detail-top-section p {
+  width: 148px;
+  height: 20px;
+  margin: 9px 70px 57px 13px;
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6374f3;
+}
+
+.locaiton-section img{
+    width: 375px;
+    height: 282px;
+    margin: 0 0 0 -25px;
+    padding: 23.5px 139px 0 24px;
+    border-bottom: 0.5px solid #dbe0e5;
+
+}
+
+.personal-info-section{
+    display: flex;
+    width: 142px;
+    border-right: 0.5px solid #dbe0e5;
+}
+
+.gender-section p{
+    width: 60px;
+    height: 16px;
+    margin: 15px 58px 26px 44px;
+    font-family: Gotham;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #b1b8c5;
+}
+
+.gender-section span{
+    width: 45px;
+  height: 45px;
+  margin: 42px 53px 45px 44px;
+  color: #6374f3;
+}
+
+.age-section{
+    padding: 0;
+}
+
+.age-section p{
+    width: 60px;
+    height: 16px;
+    margin: 15px 58px 26px 24px;
+    font-family: Gotham;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #b1b8c5;
+}
+
+.age-section p:nth-child(2){
+   margin-left: 122px;
+   margin-right: 40px;
+}
+
+.dashboard{
+    width: 232px;
+  height: 100%;
+  margin-left: -20px;
+  margin-top: -15px;
+    opacity: 0.5;
+  background-color: #6374f3;
+}
+
+.dashboard div:first-child{
+    width: 96px;
+    height: 2px;
+    margin-top: 10px;
+    margin: 0 -30px 10px 135px;
+    border-bottom: solid 3px black;
+    background-color: #243194;
+}
+
+.dashboard div div{
+    width: 19.8px;
+  height: 1px;
+  margin: 0 0 8px 70px;
+  border: solid .5px #243194;
+  background: #243194;
+}
+
+.last-touches{
+  display: flex;
+  justify-content: center;
+}

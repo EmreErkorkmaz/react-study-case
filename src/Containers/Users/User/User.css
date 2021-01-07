@@ -1,0 +1,48 @@
+.list-item{
+    margin-left: -40px;
+    height: 91px;
+    width: 375px;
+    display: flex;
+    align-items: center;    
+    border-bottom: solid 1px #dbe0e5;
+
+}
+
+.link{
+  text-decoration: none;
+}
+
+
+
+.list-item img{
+  width: 52px;
+  height: 52px;
+  margin: 18px 22px 20px 24px;
+  border-radius: 52px;
+}
+
+.list-item p{
+  min-width: 80px;
+  height: 18px;
+  margin: 36px 145px 37px 22px;
+  font-family: Gotham;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6374f3;
+}
+
+.list-item div{
+  width: 8.9px;
+  height: 17.8px;
+  margin-right: 41.1px;
+}
+
+.icon{
+  margin-left: -20px;
+  color:#97a2ac;
+}
+
