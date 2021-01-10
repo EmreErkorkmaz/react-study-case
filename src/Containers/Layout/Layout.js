@@ -5,19 +5,15 @@ import UserDetailContext from '../../hooks/UserDetailContext';
 import Users from '../Users/Users';
 import UserDetail from '../UserDetail/UserDetail';
 import './Layout.css';
+import UsersListContext from '../../hooks/UsersListContext';
 
 export default function Layout() {
 
-    const [userId, setUserId] = useState();
+    const [usersList, setUsersList] = useState([]);
+    const [userAmount, setUserAmount] = useState(5);
+    const [userId, setUserId] = useState(null);
+    const [userDetail, setUserDetail] = useState(null);
     const [isMain, setIsMain] = useState(true);
-
-    const inspectUser = (id) => {
-        setUserId(id);
-    }
-
-    const cleanInspectUser = () => {
-        setUserId(null);
-    }
 
     const changeMain = () => {
         setIsMain(prevState => !prevState);
@@ -25,13 +21,15 @@ export default function Layout() {
 
     return (
         <div className='layout'>
-            <UserDetailContext.Provider value={{userId: userId, inspectUser: inspectUser, cleanInspectUser: cleanInspectUser, isMain: isMain, changeMain: changeMain}}>
-            <TopNav/>
-            <Switch>
-                {userId ? <Route component={UserDetail} path='/user-detail' exact/> : null}
-                <Route component={Users} path='/'/>
-            </Switch>
-            </UserDetailContext.Provider>
+            <UsersListContext.Provider value={{usersList: usersList, setUsersListHandler: setUsersList, userAmount: userAmount, setUserAmount: setUserAmount}}>
+              <UserDetailContext.Provider value={{userId: userId, inspectUser: setUserId, userDetail: userDetail, setUserDetail:setUserDetail, isMain: isMain, changeMain: changeMain}}>
+                <TopNav/>
+                <Switch>
+                    {userId ? <Route component={UserDetail} path='/user-detail' exact/> : null}
+                    <Route component={Users} path='/'/>
+                </Switch>
+              </UserDetailContext.Provider>
+            </UsersListContext.Provider>
         </div>
     )
 }

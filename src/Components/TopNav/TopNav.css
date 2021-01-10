@@ -1,6 +1,8 @@
 .topNav-section{
   position: fixed;
   width: 375px;
+  background: #ffffff;
+  border-radius: 10px;
 }
 
 .topNav{

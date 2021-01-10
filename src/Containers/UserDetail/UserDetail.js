@@ -1,24 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Spinner from "../../Components/UI/Spinner/Spinner";
 import UserDetailContext from "../../hooks/UserDetailContext";
 import "./UserDetail.css";
 import API_KEY from '../../api/apiKey';
 
 export default function UserDetail() {
-  const [user, setUser] = useState(null);
-
-  const {userId} = useContext(UserDetailContext);
+  const {userId, userDetail, setUserDetail} = useContext(UserDetailContext);
 
   useEffect(() => {
+    if(userDetail !== null && userDetail.id !== userId){
+      setUserDetail(null);
+    }
     fetch(`https://dummyapi.io/data/api/user/${userId}`, {
       headers: {
         "app-id": API_KEY,
       },
     })
       .then((res) => res.json())
-      .then( async (res) => {
-        setUser(res);
-        console.log("User: ", user,  "Res: ", res);
+      .then((res) => {
+        setUserDetail(res);
       })
       .catch((err) => console.log(err));
 
@@ -38,14 +38,14 @@ export default function UserDetail() {
 
   let userPage = <div className="last-touches"><Spinner /></div>;
 
-  if (user) {
+  if (userDetail) {
     userPage = (
       <div>
         <div className="user-detail-top-section">
-          <img src={user.picture} alt="user" />
+          <img src={userDetail.picture} alt="user" />
           <div>
             <h2>Name</h2>
-            <p>{user.firstName}</p>
+            <p>{userDetail.firstName}</p>
           </div>
         </div>
         <div className="locaiton-section">
@@ -55,12 +55,12 @@ export default function UserDetail() {
           <div className="gender-section">
               <p>Gender</p>
               <span>
-                <i className={`fas ${user.gender === "male" ? "fa-mars" : "fa-venus"} fa-4x`}></i>
+                <i className={`fas ${userDetail.gender === "male" ? "fa-mars" : "fa-venus"} fa-4x`}></i>
               </span>
           </div>
           <div className="age-section">
               <p>Age</p>
-              <p>{getAge(user.dateOfBirth)} yo</p>
+              <p>{getAge(userDetail.dateOfBirth)} yo</p>
               <div className="dashboard">
                   <div>
                       <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
